@@ -1,10 +1,11 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-4c73f052.js",
+    "file": "start-a729cfce.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-f9d7a059.js"
+      "_index-0737cc36.js",
+      "_preload-helper-29616aea.js"
     ],
     "dynamicImports": [
       "src/routes/__layout.svelte",
@@ -13,36 +14,54 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-bf976d23.js",
+    "file": "pages/__layout.svelte-5f89e256.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-f9d7a059.js"
+      "_index-0737cc36.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-a4b2bd39.css"
+      "assets/pages/__layout.svelte-96424cb6.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-0995da92.js",
+    "file": "error.svelte-7cbb4274.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-f9d7a059.js"
+      "_index-0737cc36.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-1b8360ed.js",
+    "file": "pages/index.svelte-d5204f98.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-f9d7a059.js"
+      "_preload-helper-29616aea.js",
+      "_index-0737cc36.js"
+    ],
+    "dynamicImports": [
+      "node_modules/immortal-db/src/index.js"
+    ],
+    "css": [
+      "assets/pages/index.svelte-83be814d.css"
     ]
   },
-  "_index-f9d7a059.js": {
-    "file": "chunks/index-f9d7a059.js"
+  "_index-0737cc36.js": {
+    "file": "chunks/index-0737cc36.js"
+  },
+  "_preload-helper-29616aea.js": {
+    "file": "chunks/preload-helper-29616aea.js",
+    "imports": [
+      "_index-0737cc36.js"
+    ]
+  },
+  "node_modules/immortal-db/src/index.js": {
+    "file": "chunks/index-17ddc90e.js",
+    "src": "node_modules/immortal-db/src/index.js",
+    "isDynamicEntry": true
   }
 }
