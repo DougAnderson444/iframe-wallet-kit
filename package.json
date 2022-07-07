@@ -1,6 +1,6 @@
 {
 	"name": "iframe-wallet-kit",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -31,6 +31,8 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.5.0",
-		"cookie": "^0.4.1"
+		"@peerpiper/iframe-wallet-engine": "github:peerpiper/iframe-wallet-engine",
+		"cookie": "^0.4.1",
+		"immortal-db": "^1.1.0"
 	}
 }
