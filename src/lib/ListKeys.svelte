@@ -1,4 +1,6 @@
 <script>
+	// @ts-nocheck
+
 	// show the user's keys
 	// parse out the JWKs into types: RSA and Ed25519 according to JWK
 	import { shorten } from '$lib/utils';
@@ -11,27 +13,29 @@
 </script>
 
 {#if keys && keys.length > 0}
-	<div class="card">
+	<div class="card text-toxic shadow-md shadow-toxic/50 rounded-lg p-4 m-4 w-auto bg-neutral-800">
 		{#if keys.filter((k) => k.publicKeyJWK.kty == 'RSA').length}
 			<div class="keylist overflow-hidden">
 				<div class="row left">
 					<span>Arweave</span>
 				</div>
 				<div class="row list-group">
-					<ul>
-						{#each keys.filter((k) => k.publicKeyJWK.kty == 'RSA') as rsaJWK}
-							<li
+					{#each keys.filter((k) => k.publicKeyJWK.kty == 'RSA') as rsaJWK}
+						<div class="flex flex-col">
+							<div
 								class="{collapsed && selectedRSA != rsaJWK.kid
 									? 'hide'
 									: ''} list-group-item list-group-item-action "
 							>
 								{rsaJWK.name}
+							</div>
+							<div class="flex-1">
 								<Clipboard>
-									{rsaJWK.publicKeyJWK.kid}</Clipboard
+									Base64URL: {rsaJWK.publicKeyJWK.kid}</Clipboard
 								>
-							</li>
-						{/each}
-					</ul>
+							</div>
+						</div>
+					{/each}
 				</div>
 			</div>
 		{/if}
@@ -46,13 +50,13 @@
 							<li class=" list-group-item list-group-item-action ">
 								{shorten(edJWK.name)}
 								<div class="full-pubKey">
-									<Clipboard>{edJWK.publicKeyJWK.x}</Clipboard>
+									<Clipboard>Base64URL: {edJWK.publicKeyJWK.x}</Clipboard>
 								</div>
 								<div class="full-pubKey">
-									<Clipboard>{edJWK.publicKeyBase58}</Clipboard>
+									<Clipboard>Base58: {edJWK.publicKeyBase58}</Clipboard>
 								</div>
 								<div class="full-pubKey">
-									<Clipboard>{edJWK.publicKey}</Clipboard>
+									<Clipboard>Bytes: {edJWK.publicKey}</Clipboard>
 								</div>
 							</li>
 							<!-- <b>{shorten(key?.publicKeyBase58)}</b><br /> -->
@@ -65,24 +69,11 @@
 {/if}
 
 <style>
-	div {
-		--font-color: #0eff02;
-	}
 	.full-pubKey {
 		/* display: none; */
 		text-overflow: ellipsis;
 	}
-	.card {
-		margin: 1em 0em;
-		background-color: rgb(35, 35, 35);
-		padding: 1.5em;
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		border-radius: 4px;
-		box-shadow: 2px 2px 6px rgba(14, 255, 2, 0.7);
-		color: var(--font-color);
-		width: 100%;
-	}
+
 	.keylist {
 		display: flex;
 		flex-direction: row;

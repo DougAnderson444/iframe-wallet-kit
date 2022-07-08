@@ -14,3 +14,5 @@ declare namespace App {
 
 	// interface Stuff {}
 }
+
+declare module '@peerpiper/iframe-wallet-engine';

@@ -2,7 +2,7 @@
 	"name": "iframe-wallet-kit",
 	"version": "0.0.3",
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite dev --port 8089",
 		"build": "vite build",
 		"package": "svelte-kit package",
 		"preview": "vite preview",
