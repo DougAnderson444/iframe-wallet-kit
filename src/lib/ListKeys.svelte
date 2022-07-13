@@ -30,9 +30,7 @@
 								{rsaJWK.name}
 							</div>
 							<div class="flex-1">
-								<Clipboard>
-									Base64URL: {rsaJWK.publicKeyJWK.kid}</Clipboard
-								>
+								Base64URL: <Clipboard>{rsaJWK.publicKeyJWK.kid}</Clipboard>
 							</div>
 						</div>
 					{/each}
@@ -50,13 +48,13 @@
 							<li class=" list-group-item list-group-item-action ">
 								{shorten(edJWK.name)}
 								<div class="full-pubKey">
-									<Clipboard>Base64URL: {edJWK.publicKeyJWK.x}</Clipboard>
+									Base64URL: <Clipboard>{edJWK.publicKeyJWK.x}</Clipboard>
 								</div>
 								<div class="full-pubKey">
-									<Clipboard>Base58: {edJWK.publicKeyBase58}</Clipboard>
+									Base58: <Clipboard>{edJWK.publicKeyBase58}</Clipboard>
 								</div>
 								<div class="full-pubKey">
-									<Clipboard>Bytes: {edJWK.publicKey}</Clipboard>
+									Bytes: <Clipboard>{edJWK.publicKey}</Clipboard>
 								</div>
 							</li>
 							<!-- <b>{shorten(key?.publicKeyBase58)}</b><br /> -->

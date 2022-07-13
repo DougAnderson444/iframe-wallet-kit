@@ -12,8 +12,8 @@
 				⚠️ Authorize {props.method} from your wallet?
 			</div>
 			<div class="submit">
-				<button class="green" on:click={handleConfirmed}>Yes</button>
-				<button class="yellow" on:click={handleDenied}>No</button>
+				<Button type={'Yes'} clickHandler={handleConfirmed}>Yes</Button>
+				<Button type={'No'} clickHandler={handleDenied}>No</Button>
 			</div>
 		</div>
 	</div>

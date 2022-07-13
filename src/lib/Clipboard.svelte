@@ -49,6 +49,7 @@
 <style>
 	.Clipboard {
 		margin: 0 0.5em;
+		word-break: break-all;
 	}
 	.Clipboard-Container {
 		display: flex;
