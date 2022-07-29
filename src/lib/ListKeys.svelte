@@ -3,7 +3,7 @@
 
 	// show the user's keys
 	// parse out the JWKs into types: RSA and Ed25519 according to JWK
-	import { shorten } from '$lib/utils';
+	import { shorten, bufftoHex } from '$lib/utils';
 	import Clipboard from './Clipboard.svelte';
 
 	export let keys;
@@ -52,6 +52,9 @@
 								</div>
 								<div class="full-pubKey">
 									Base58: <Clipboard>{edJWK.publicKeyBase58}</Clipboard>
+								</div>
+								<div class="full-pubKey">
+									Hex: <Clipboard>{bufftoHex(edJWK.publicKey)}</Clipboard>
 								</div>
 								<div class="full-pubKey">
 									Bytes: <Clipboard>{edJWK.publicKey}</Clipboard>
