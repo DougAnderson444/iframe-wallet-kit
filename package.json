@@ -1,6 +1,6 @@
 {
-	"name": "iframe-wallet-kit",
-	"version": "0.0.3",
+	"name": "@peerpiper/iframe-wallet-sveltekit",
+	"version": "1.0.6",
 	"scripts": {
 		"dev": "vite dev --port 8089",
 		"build": "vite build",
