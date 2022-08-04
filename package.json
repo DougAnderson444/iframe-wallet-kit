@@ -34,5 +34,8 @@
 		"@peerpiper/iframe-wallet-engine": "github:peerpiper/iframe-wallet-engine",
 		"cookie": "^0.4.1",
 		"immortal-db": "^1.1.0"
+	},
+	"engines": {
+		"node": ">=16.7"
 	}
 }
